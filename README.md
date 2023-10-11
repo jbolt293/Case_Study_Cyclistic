@@ -14,3 +14,5 @@ The first step I completed in preparation for my analysis was to download all th
 I decided to use SQL in order to clean the data and analyze it. To do this, I went onto BigQuery and loaded all of the datasets onto it. Since some of the .csv files were over 100mb, they could not be loaded into Bigquery by just uploading them. So to bypass this, I made a bucket on Google Cloud Storage and put any files over 100mb into the bucket so they could be loaded into BigQuery.
 
 When all of the datasets were loaded into BigQuery, I combined all of them into a single dataset I labeled as "Combined_Divvy_TripData" by using the __UNION__ function. I then removed any rows of data that contained values that were null by using the __DELETE FROM__ function. After doing this, I removed any duplicates from the dataset by using the __SELECT DISTINCT__ function and saved it as another dataset. 
+## Analyze
+Now that I have cleaned up the data using SQL, I am able to analyze the data and see what trends there are in order to formulate ideas on how to answer the question at hand.
