@@ -1,0 +1,1 @@
+> Trip_Data <- bind_rows(Jan22, Feb22, Mar22, Apr22, May22, Jun22, Jul22, Aug22, Sep22, Oct22, Nov22, Dec22)
