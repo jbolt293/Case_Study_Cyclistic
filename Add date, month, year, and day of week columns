@@ -1,0 +1,7 @@
+> Trip_Data <- Trip_Data %>%
++ mutate(date = format(as.Date(started_at), "%d")) %>%
++ mutate(month = format(as.Date(started_at), "%m")) %>%
++ mutate(year = format(as.Date(started_at), "%y")) %>%
++ mutate(day_of_week = format(as.Date(started_at), "%w")) %>%
++ mutate(ride_length = difftime(ended_at, started_at)) %>%
++ mutate(start_time = strftime(started_at, "%S"))
