@@ -1,0 +1,1 @@
+Trip_Data$ride_distance <- distGeo(matrix(c(Trip_Data$start_lng, Trip_Data$start_lat), ncol = 2), matrix(c(Trip_Data$end_lng, Trip_Data$end_lat), ncol = 2))
