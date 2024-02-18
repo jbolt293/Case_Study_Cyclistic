@@ -2,3 +2,6 @@
 > install.packages("janitor")
 > install.packages("ggmap")
 > install.packages("geosphere")
+> library(janitor)
+> library(ggmap)
+> library(geosphere)
