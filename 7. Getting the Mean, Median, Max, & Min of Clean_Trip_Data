@@ -1,5 +1,3 @@
 > Clean_Trip_Data %>%
 > + summarise(ride_length_avg = mean(ride_length), median_ride_length = median(ride_length), 
 +           max_ride_length = max(ride_length), min_ride_length = min(ride_length))
-
-[alt text](D:\Users\Jake\Downloads\Emulation\Ew.png) 
