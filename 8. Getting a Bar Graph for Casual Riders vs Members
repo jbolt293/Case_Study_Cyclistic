@@ -11,4 +11,3 @@
 > ggplot(Clean_Trip_Data, aes(x = member_casual, fill=member_casual)) +
 + geom_bar() +
 + labs(x="Casuals vs Members", y="Number Of Rides", title= "Casual Riders vs Members Distribution")
-
