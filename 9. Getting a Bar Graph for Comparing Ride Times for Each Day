@@ -1,0 +1,31 @@
+Clean_Trip_Data %>%
++ group_by(member_casual, day_of_week) %>% 
++ summarise(number_of_rides = n(),average_ride_length = mean(ride_length),.groups="drop") %>%
++ arrange(member_casual, day_of_week)
+
+# A tibble: 14 × 4
+   member_casual day_of_week number_of_rides average_ride_length
+   <chr>         <chr>                 <int>               <dbl>
+ 1 casual        0                    388981               2044.
+ 2 casual        1                    277649               1751.
+ 3 casual        2                    263706               1550.
+ 4 casual        3                    274339               1485.
+ 5 casual        4                    309297               1533.
+ 6 casual        5                    334667               1683.
+ 7 casual        6                    473130               1957.
+ 8 member        0                    387180                842.
+ 9 member        1                    473305                736.
+10 member        2                    518584                728.
+11 member        3                    523836                726.
+12 member        4                    532215                738.
+13 member        5                    467051                752.
+14 member        6                    443246                848.
+
+Clean_Trip_Data %>%
++ group_by(member_casual, day_of_week) %>%
++ summarise(number_of_rides = n(), .groups="drop") %>% 
++ arrange(member_casual, day_of_week)  %>% 
++ ggplot(aes(x = day_of_week, y = number_of_rides, fill = member_casual)) +
++ labs(title ="Total rides by Members and Casual riders Vs. Day of the week") +
++ geom_col(width=0.5, position = position_dodge(width=0.5)) +
++ scale_y_continuous(labels = function(x) format(x, scientific = FALSE))
