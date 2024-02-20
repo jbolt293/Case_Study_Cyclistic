@@ -11,3 +11,14 @@
 > ggplot(Clean_Trip_Data, aes(x = member_casual, fill=member_casual)) +
 + geom_bar() +
 + labs(x="Casuals vs Members", y="Number Of Rides", title= "Casual Riders vs Members Distribution")
+
+> Clean_Trip_Data %>%
++ group_by(member_casual) %>%
++ summarise(ride_length_avg = mean(ride_length), median_ride_length = median(ride_length), 
++           max_ride_length = max(ride_length), min_ride_length = min(ride_length))
+
+# A tibble: 2 × 5
+  member_casual ride_length_avg median_ride_length max_ride_length min_ride_length
+  <chr>                   <dbl>              <dbl>           <dbl>           <dbl>
+1 casual                  1749.                780         2483235               1
+2 member                   763.                530           93594               1
